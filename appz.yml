@@ -12,7 +12,7 @@ build:
 
 deploy:
   context: francisjoy/DEV
-  replicas: 1
+  replicas: 2
   type: statefulset
   port:
   - 80
@@ -42,5 +42,5 @@ properties:
   MYSQL_PASSWORD:
      vault: MYSQL_PASSWORD_KEY
   #Generate hash at https://ehikioya.com/wordpress-password-hash-generator/
-  ADMIN_PASSWORD_HASH: $P$BAeYgHEtHyCT335q2Iya9JL4CtKHc1/
+  ADMIN_PASSWORD_HASH: $P$BqV1CEzGN7hUgiPnB7XFTrSCc1wdhv/
   revision : 84
