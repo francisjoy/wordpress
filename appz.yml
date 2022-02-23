@@ -19,14 +19,10 @@ deploy:
   
 volumes:
 - claim: wordpress-data
-  class: openebs-replicated
-  matchLabels: false
   mount: /var/www/html/wp-content/uploads
   name: uploads
   size: 5Gi   
 - claim: wordpress-backup
-  class: openebs-replicated
-  matchLabels: false
   mount: /appz/backup
   name: backup
   size: 5Gi 
